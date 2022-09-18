@@ -46,7 +46,7 @@ type httpAuthRandom struct {
 
 // func (ctx *httpAuthRandom) OnHttpRequestHeaders(int, bool) types.Action { return types.ActionPause }
 func (ctx *httpAuthRandom) OnHttpResponseHeaders(int, bool) types.Action {
-	proxywasm.AddHttpResponseHeader("x-wasm-filter", "hello from wasm")
-	proxywasm.AddHttpResponseHeader("x-auth", authHeader)
-	return types.ActionContinue
+	// proxywasm.AddHttpResponseHeader("x-wasm-filter", "hello from wasm")
+	// proxywasm.AddHttpResponseHeader("x-auth", authHeader)
+	return types.ActionPause
 }
